@@ -1,0 +1,40 @@
+.showList {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  grid-gap: 3rem;
+  padding: 0 7rem;
+}
+
+.showList a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  text-align: center;
+}
+
+.showOverview img {
+  border-radius: 5px;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  opacity: 1;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.showOverview:hover img {
+  opacity: 0.5;
+}
+
+.rating {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+@media (max-width: 600px) {
+  .showList {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+    padding: 0 4rem;
+  }
+}

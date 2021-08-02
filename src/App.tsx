@@ -1,10 +1,8 @@
 import React from "react";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route
-} from "react-router-dom";
-import Home from './Home'
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import "./App.css";
+import Home from "./pages/Home/Home";
+import Show from "./pages/Show/Show";
 
 export default function App() {
   return (
@@ -13,6 +11,9 @@ export default function App() {
         <Switch>
           <Route exact path="/">
             <Home />
+          </Route>
+          <Route path="/show/:id">
+            <Show />
           </Route>
         </Switch>
       </div>
